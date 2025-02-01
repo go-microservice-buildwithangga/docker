@@ -1,3 +1,4 @@
+name: local-docker
 services:
   zookeeper:
    image: confluentinc/cp-zookeeper:7.4.6
@@ -50,9 +51,9 @@ services:
    image: postgres:latest
    environment:
      POSTGRES_USER: root
-     POSTGRES_PASSWORD: barca1899
+     POSTGRES_PASSWORD: secret
    ports:
-     - "5432:5555" 
+     - "5432:5432" 
    volumes:
      - postgresql:/var/lib/postgresql
      - postgresql_data:/var/lib/postgresql/data
